@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div {
+            display: inline-block;
+            width: 50%;
+            height: 400px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .blue {
+            background-color: red;
+            transition-duration: 3s;
+            position: absolute;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blue" id="mayank"></div>
+    <div class="red"></div>
+    <button onclick="f1();">Magic</button>
+</body>
+<script>
+    function f1() {
+        var ele = document.getElementById("mayank");
+        ele.style.backgroundColor = "gold";
+        ele.style.marginTop = "100px";
+        ele.style.borderRadius = "50%";
+        ele.style.textAlign = "center";
+        ele.style.boxShadow = "0px 0px 15px 15px black";
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS-Magic</title>
+</head>
+<style type="text/css">
+    .brij {
+        background-color: orange;
+        height: 250px;
+        width: 250px;
+        margin: 40px;
+        display: inline-block;
+        position: absolute;
+        box-shadow: 0 0 8px 0px black;
+    }
+</style>
+
+<body>
+
+    <div class="brij" id="br1"></div>
+    <div class="brij" id="br2"></div>
+    <div class="brij" id="br3"></div>
+    <div class="brij" id="br4"></div>
+    <div class="brij" id="br5"></div>
+    <div class="brij" id="br6"></div>
+    <div class="brij" id="br7"></div>
+    <div class="brij" id="br8"></div>
+
+    <button style="margin-left: 20px" onclick="TwoFunction()">ShowMagic</button>
+    <button style="margin-left: 20px" onclick="ThreeFunction()">HideMagic</button>
+
+</body>
+
+<script>
+    function TwoFunction() {
+        magic1();
+        magic2();
+        magic3();
+        magic4();
+        magic5();
+        magic6();
+        magic7();
+        magic8();
+    }
+    function ThreeFunction()
+    {
+        var EleArray = document.getElementsByTagName("div");
+        for(i=0;i<EleArray.length;i++)
+        {
+            EleArray[i].style="";
+        } 
+    }
+
+
+    function magic1() {
+        var ele = document.getElementById("br1");
+        ele.style.backgroundColor = "transparent";
+        ele.style.marginTop = "100px";
+        ele.style.borderRadius = "100% 0%  100% 100%";
+        ele.style.textAlign = "center";
+        ele.style.boxShadow = "";
+        ele.style.transitionDuration = "5s";
+        ele.style.borderBottomRight = "2px solid tomato";
+        ele.style.transform = "rotate(-44deg)";
+        ele.style.HEIGHT = "400PX";
+    }
+
+    function magic2() {
+        var ele = document.getElementById("br2");
+        ele.style.backgroundColor = "transparent";
+        ele.style.marginTop = "100px";
+        ele.style.borderRadius = "100% 0%  100% 100%";
+        ele.style.textAlign = "center";
+        ele.style.boxShadow = "100% 0px 100%  80% black";
+        ele.style.transitionDuration = "5s";
+        ele.style.borderBottomRight = "2px solid tomato";
+        ele.style.transform = "rotate(0deg)";
+        ele.style.HEIGHT = "400PX";
+    }
+
+    function magic3() {
+        var ele = document.getElementById("br3");
+        ele.style.backgroundColor = "transparent";
+        ele.style.marginTop = "100px";
+        ele.style.borderRadius = "100% 0%  100% 100%";
+        ele.style.textAlign = "center";
+        ele.style.boxShadow = "100% 0px 100%  80% black";
+        ele.style.transitionDuration = "5s";
+        ele.style.borderBottomRight = "2px solid tomato";
+        ele.style.transform = "rotate(45deg)";
+        ele.style.HEIGHT = "400PX";
+    }
+
+    function magic4() {
+        var ele = document.getElementById("br4");
+        ele.style.backgroundColor = "transparent";
+        ele.style.marginTop = "100px";
+        ele.style.borderRadius = "100% 0%  100% 100%";
+        ele.style.textAlign = "center";
+        ele.style.boxShadow = "100% 0px 100%  80% black";
+        ele.style.transitionDuration = "5s";
+        ele.style.borderBottomRight = "2px solid tomato";
+        ele.style.transform = "rotate(90deg)";
+        ele.style.HEIGHT = "400PX";
+    }
+
+    function magic5() {
+        var ele = document.getElementById("br5");
+        ele.style.backgroundColor = "transparent";
+        ele.style.marginTop = "100px";
+        ele.style.borderRadius = "100% 0%  100% 100%";
+        ele.style.textAlign = "center";
+        ele.style.boxShadow = "100% 0px 100%  80% black";
+        ele.style.transitionDuration = "5s";
+        ele.style.borderBottomRight = "2px solid tomato";
+        ele.style.transform = "rotate(135deg)";
+        ele.style.HEIGHT = "400PX";
+    }
+    function magic6() {
+        var ele = document.getElementById("br6");
+        ele.style.backgroundColor = "transparent";
+        ele.style.marginTop = "100px";
+        ele.style.borderRadius = "100% 0%  100% 100%";
+        ele.style.textAlign = "center";
+        ele.style.boxShadow = "100% 0px 100%  80% black";
+        ele.style.transitionDuration = "5s";
+        ele.style.borderBottomRight = "2px solid tomato";
+        ele.style.transform = "rotate(180deg)";
+        ele.style.HEIGHT = "400PX";
+    }
+
+    function magic7() {
+        var ele = document.getElementById("br7");
+        ele.style.backgroundColor = "transparent";
+        ele.style.marginTop = "100px";
+        ele.style.borderRadius = "100% 0%  100% 100%";
+        ele.style.textAlign = "center";
+        ele.style.boxShadow = "100% 0px 100%  80% black";
+        ele.style.transitionDuration = "5s";
+        ele.style.borderBottomRight = "2px solid tomato";
+        ele.style.transform = "rotate(225deg)";
+        ele.style.HEIGHT = "400PX";
+    }
+
+    function magic8() {
+        var ele = document.getElementById("br8");
+        ele.style.backgroundColor = "transparent";
+        ele.style.marginTop = "100px";
+        ele.style.borderRadius = "100% 0%  100% 100%";
+        ele.style.textAlign = "center";
+        ele.style.boxShadow = "100% 0px 100%  80% black";
+        ele.style.transitionDuration = "5s";
+        ele.style.borderBottomRight = "2px solid tomato";
+        ele.style.transform = "rotate(270deg)";
+        ele.style.HEIGHT = "400PX";
+    }
+
+</script>
+
+
+
+</html>
+
