@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Users</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src ="jquary.js"></script>
+    <script src ="bootstrap.js"></script>
+
+  </head>
+  <style>
+  body {
+    background-color: #4b4b4b;
+  }
+  .div1{
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+.fontsize{
+  font-size: 50px;
+  color: #4b4b4b;
+
+  margin-top: 100px;
+}
+.padd{
+    padding: 15px;
+}
+
+span:hover{
+  color: powderblue;
+
+}
+
+
+
+
+
+
+
+
+  </style>
+  <body>
+    <div class="container">
+    <button type="button" name="button" onclick="getuser()">Click me to see</button>
+    <div class="div1 col-xs-offset-3 col-xs-6">
+    <div id="im"></div>
+    <div style= "height:200px "></div>
+    <div class="" id="main">
+      <p class="fontsize">
+      <span class="fa fa-user  padd"></span>
+      <span class="fa fa-envelope   padd"></span>
+      <span class="fa fa-calendar   padd"></span>
+      <span class="fa fa-map-marker   padd"></span>
+      <span class="fa fa-phone   padd"></span>
+      <span class="fa fa-lock   padd"></span>
+    </p>
+    </div>
+    </div>
+    </div>
+  </body>
+
+<script type="text/javascript">
+
+
+var user =[{"results":[{"gender":"male","name":{"title":"mr","first":"alexis","last":"gill"},"location":{"street":"6051 coastal highway","city":"st. antoine","state":"québec","postcode":61864},"email":"alexis.gill@example.com","login":{"username":"lazybird225","password":"immortal","salt":"LSAISdRW","md5":"cf4a28a4353a7b7750dd55aa0bda7d12","sha1":"0d41d8cb6416d3c1bf46fb87dbb89c0df2f404a6","sha256":"edeb598c0dd06a3aa71a888e0af129f25e8220afabf0c2379ab8cd8aa1e5a88b"},"dob":"1969-09-07","time_of_dob":"07:29:42","registered":"2007-04-23 00:22:34","phone":"623-655-7159","cell":"715-848-2281","id":{"name":"","value":null},"picture":{"large":"https://randomuser.me/api/portraits/men/75.jpg","medium":"https://randomuser.me/api/portraits/med/men/75.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/75.jpg"},"nat":"CA"}],"info":{"seed":"b5197d3016fcbee5","results":1,"page":1,"version":"1.1"}}];
+
+
+function getuser()
+{
+    var p1=document.createElement("p");
+    p1.innerHTML=user[0].results[0].name.first+ " "+user[0].results[0].name.last;
+    document.getElementById("main").appendChild(p1);
+
+    var p2=document.createElement("p");
+    p2.innerHTML=user[0].results[0].email;
+    document.getElementById("main").appendChild(p2);
+
+    var p3=document.createElement("p");
+    p3.innerHTML=user[0].results[0].dob;
+    document.getElementById("main").appendChild(p3);
+
+    var p4=document.createElement("p");
+    p4.innerHTML=user[0].results[0].location.street;
+    document.getElementById("main").appendChild(p4);
+
+    var p5=document.createElement("p");
+    p5.innerHTML=user[0].results[0].phone;
+    document.getElementById("main").appendChild(p5);
+
+    var p6=document.createElement("p");
+    p6.innerHTML=user[0].results[0].login.password;
+    document.getElementById("main").appendChild(p6);
+
+    var img1=document.createElement("img");
+    img1.src=user[0].results[0].picture.large;
+    img1.style.borderRadius="50%";
+    img1.style.border ="1px dotted #ddd";
+    img1.style.padding="5px";
+    document.getElementById("im").appendChild(img1);
+}
+</script>
+
+</html>
