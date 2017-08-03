@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,11 +18,12 @@
     background-color: #fff;
     padding: 20px;
     text-align: center;
+    margin-top: 100px;
+
   }
 .fontsize{
   font-size: 50px;
   color: #4b4b4b;
-
   margin-top: 100px;
 }
 .padd{
@@ -35,26 +37,21 @@ span:hover{
 
 
 
-
-
-
-
-
   </style>
   <body>
     <div class="container">
-    <button type="button" name="button" onclick="getuser()">Click me to see</button>
     <div class="div1 col-xs-offset-3 col-xs-6">
     <div id="im"></div>
-    <div style= "height:200px "></div>
-    <div class="" id="main">
+    <div style= "height:50px" id="main">
+    </div>
+    <div class="" >
       <p class="fontsize">
-      <span class="fa fa-user  padd"></span>
-      <span class="fa fa-envelope   padd"></span>
-      <span class="fa fa-calendar   padd"></span>
-      <span class="fa fa-map-marker   padd"></span>
-      <span class="fa fa-phone   padd"></span>
-      <span class="fa fa-lock   padd"></span>
+      <span class="fa fa-user  padd" onmouseover="ap1()" ></span>
+      <span class="fa fa-envelope   padd" onmouseover="ap2()"></span>
+      <span class="fa fa-calendar   padd" onmouseover="ap3()"></span>
+      <span class="fa fa-map-marker   padd" onmouseover="ap4()"></span>
+      <span class="fa fa-phone   padd" onmouseover="ap5()"></span>
+      <span class="fa fa-lock   padd" onmouseover="ap6()"></span>
     </p>
     </div>
     </div>
@@ -69,29 +66,6 @@ var user =[{"results":[{"gender":"male","name":{"title":"mr","first":"alexis","l
 
 function getuser()
 {
-    var p1=document.createElement("p");
-    p1.innerHTML=user[0].results[0].name.first+ " "+user[0].results[0].name.last;
-    document.getElementById("main").appendChild(p1);
-
-    var p2=document.createElement("p");
-    p2.innerHTML=user[0].results[0].email;
-    document.getElementById("main").appendChild(p2);
-
-    var p3=document.createElement("p");
-    p3.innerHTML=user[0].results[0].dob;
-    document.getElementById("main").appendChild(p3);
-
-    var p4=document.createElement("p");
-    p4.innerHTML=user[0].results[0].location.street;
-    document.getElementById("main").appendChild(p4);
-
-    var p5=document.createElement("p");
-    p5.innerHTML=user[0].results[0].phone;
-    document.getElementById("main").appendChild(p5);
-
-    var p6=document.createElement("p");
-    p6.innerHTML=user[0].results[0].login.password;
-    document.getElementById("main").appendChild(p6);
 
     var img1=document.createElement("img");
     img1.src=user[0].results[0].picture.large;
@@ -99,7 +73,204 @@ function getuser()
     img1.style.border ="1px dotted #ddd";
     img1.style.padding="5px";
     document.getElementById("im").appendChild(img1);
+
 }
+function ap1()
+{
+  var p1=document.getElementById("main");
+  p1.innerHTML=user[0].results[0].name.first+ " "+user[0].results[0].name.last;
+}
+function ap2()
+{
+  var p2=document.getElementById("main");
+  p2.innerHTML=user[0].results[0].email;
+}
+function ap3()
+{
+  var p3=document.getElementById("main");
+  p3.innerHTML=user[0].results[0].dob;
+}
+function ap4()
+{
+  var p4=document.getElementById("main");
+  p4.innerHTML=user[0].results[0].location.street;
+}
+function ap5()
+{
+  var p5=document.getElementById("main");
+  p5.innerHTML=user[0].results[0].phone;
+}
+function ap6()
+{
+  var p6=document.getElementById("main");
+  p6.innerHTML=user[0].results[0].login.password;
+}
+getuser()
+
+</script>
+
+</html>
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Users</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src ="jquary.js"></script>
+    <script src ="bootstrap.js"></script>
+
+  </head>
+  <style>
+  body {
+    background-color: #4b4b4b;
+  }
+  .div1{
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    margin-top: 100px;
+    border: 5px dashed #4b4b4b;
+
+  }
+.fontsize{
+  font-size: 50px;
+  color: #4b4b4b;
+  margin-top: 30px;
+}
+.padd{
+    padding: 15px;
+}
+
+span:hover{
+  color: powderblue;
+
+}
+#main{
+  height:30px;
+  margin-top:30px;
+  font-family: Times New Roman;
+  font-size: 15px;
+  color: #4b4b4b;
+}
+#main1{
+  height:50px;
+  font-family:  Bookman;
+  font-size: 30px;
+  color: #4b4b4b;
+}
+.div2{
+  height:100px;
+  background-color: #cccccc;
+  margin: -30px;
+}
+
+
+  </style>
+  <body>
+    <div class="container">
+    <div class="div1 col-xs-offset-3 col-xs-6">
+      <div class="div2"></div>
+    <div id="im"></div>
+    <div  id="main"></div>
+    <div id="main1"></div>
+    <div class="" >
+      <p class="fontsize">
+      <span class="fa fa-user  padd" onmouseover="ap1()" ></span>
+      <span class="fa fa-envelope   padd" onmouseover="ap2()"></span>
+      <span class="fa fa-calendar   padd" onmouseover="ap3()"></span>
+      <span class="fa fa-map-marker   padd" onmouseover="ap4()"></span>
+      <span class="fa fa-phone   padd" onmouseover="ap5()"></span>
+      <span class="fa fa-lock   padd" onmouseover="ap6()"></span>
+    </p>
+    </div>
+    </div>
+    </div>
+  </body>
+
+<script type="text/javascript">
+
+
+var user =[{"results":[{"gender":"male","name":{"title":"mr","first":"alexis","last":"gill"},"location":{"street":"6051 coastal highway","city":"st. antoine","state":"québec","postcode":61864},"email":"alexis.gill@example.com","login":{"username":"lazybird225","password":"immortal","salt":"LSAISdRW","md5":"cf4a28a4353a7b7750dd55aa0bda7d12","sha1":"0d41d8cb6416d3c1bf46fb87dbb89c0df2f404a6","sha256":"edeb598c0dd06a3aa71a888e0af129f25e8220afabf0c2379ab8cd8aa1e5a88b"},"dob":"1969-09-07","time_of_dob":"07:29:42","registered":"2007-04-23 00:22:34","phone":"623-655-7159","cell":"715-848-2281","id":{"name":"","value":null},"picture":{"large":"https://randomuser.me/api/portraits/men/75.jpg","medium":"https://randomuser.me/api/portraits/med/men/75.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/75.jpg"},"nat":"CA"}],"info":{"seed":"b5197d3016fcbee5","results":1,"page":1,"version":"1.1"}}];
+
+
+function getuser()
+{
+
+    var img1=document.createElement("img");
+    img1.src=user[0].results[0].picture.large;
+    img1.style.borderRadius="50%";
+    img1.style.border ="1px dotted #ddd";
+    img1.style.padding="5px";
+    img1.style.marginTop="-40px";
+
+    document.getElementById("im").appendChild(img1);
+}
+
+function ap1()
+{
+  var p11=document.getElementById("main");
+  var p1=document.getElementById("main1");
+  p11.innerHTML="My Name is "+"<br/>"
+  p1.innerHTML=user[0].results[0].name.first+ " "+user[0].results[0].name.last;
+}
+
+function ap2()
+{
+  var p21=document.getElementById("main");
+  var p2=document.getElementById("main1");
+  p21.innerHTML="My E-mail address is"+"<br/>"
+  p2.innerHTML=user[0].results[0].email;
+}
+
+function ap3()
+{
+  var p31=document.getElementById("main");
+  var p3=document.getElementById("main1");
+  p31.innerHTML="My birthday is"+"<br/>"
+  p3.innerHTML=user[0].results[0].dob;
+}
+
+function ap4()
+{
+  var p41=document.getElementById("main");
+  p41.innerHTML="My Aaddress is"+"<br/>"
+  var p4=document.getElementById("main1");
+  p4.innerHTML=user[0].results[0].location.street;
+}
+
+function ap5()
+{
+  var p51=document.getElementById("main");
+  p51.innerHTML="My phone number is"+"<br/>"
+  var p5=document.getElementById("main1");
+  p5.innerHTML=user[0].results[0].phone;
+}
+function ap6()
+{
+  var p61=document.getElementById("main");
+  p61.innerHTML="My password is"+"<br/>"
+  var p6=document.getElementById("main1");
+  p6.innerHTML=user[0].results[0].login.password;
+}
+getuser()
+
 </script>
 
 </html>
