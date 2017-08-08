@@ -1,4 +1,4 @@
-var user = [{
+var user = {
   "results": [
     {
       "gender": "female",
@@ -13,7 +13,7 @@ var user = [{
         "state": "west midlands",
         "postcode": "EZ4V 7GR"
       },
-      "email": "rosalyn.horton@example.com",
+      "email": "rosalyn. horton@example .com",
       "login": {
         "username": "heavyfrog824",
         "password": "nirvana",
@@ -22,9 +22,9 @@ var user = [{
         "sha1": "93b21169225792920fa6349a4819c3f4e1b59fae",
         "sha256": "0f2524465db90af7b78b855f072dbdcf2f491a0257f5665fd8e01c62fc46f3da"
       },
-      "dob": "1964-04-13 03:21:29",
+      "dob": "10/8/2017",
       "registered": "2012-04-16 01:17:04",
-      "phone": "0116735 520 6974",
+      "phone": "(735) - 520 - 6974",
       "cell": "0716-818-723",
       "id": {
         "name": "NINO",
@@ -45,4 +45,3 @@ var user = [{
     "version": "1.1"
   }
 }
-];
