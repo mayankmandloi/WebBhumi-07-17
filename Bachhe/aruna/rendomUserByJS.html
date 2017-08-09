@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>anguler</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/angular.js" charset="utf-8"></script>
+		<script src="js/JrandomUser.js" charset="utf-8"></script>
+		
+		<style>
+	
+			.myDIV {
+			  min-width: 420px;
+			  min-height:200px;
+			  display: none;
+			  top:-320px;
+			  margin-top:-220px;
+			}
+		.aStyle
+		{
+			margin-bottom:5px; 
+			font-size:40px; 
+			margin-left:px;
+		}
+			
+		</style>
+		<script>
+			function myFunction1() {
+
+				document.getElementById("myDIV1").style.display = "block";
+
+				document.getElementById("myDIV2").style.display = "none";
+
+				document.getElementById("myDIV3").style.display = "none";
+
+				document.getElementById("myDIV4").style.display = "none";
+				
+				document.getElementById("myDIV5").style.display = "none";
+				
+				document.getElementById("myDIV6").style.display = "none";
+
+			}
+
+			function myFunction2() {
+
+			  document.getElementById("myDIV1").style.display = "none";
+
+			  document.getElementById("myDIV2").style.display = "block";
+
+			  document.getElementById("myDIV3").style.display = "none";
+
+			  document.getElementById("myDIV4").style.display = "none";
+			  
+			  document.getElementById("myDIV5").style.display = "none";
+				
+			  document.getElementById("myDIV6").style.display = "none";
+
+			}
+
+			function myFunction3() {
+
+			  document.getElementById("myDIV1").style.display = "none";
+
+			  document.getElementById("myDIV2").style.display = "none";
+
+			  document.getElementById("myDIV3").style.display = "block";
+
+			  document.getElementById("myDIV4").style.display = "none";
+			  
+			  document.getElementById("myDIV5").style.display = "none";
+				
+			  document.getElementById("myDIV6").style.display = "none";
+			}
+
+			function myFunction4() {
+
+			  document.getElementById("myDIV1").style.display = "none"; 
+
+			  document.getElementById("myDIV2").style.display = "none";
+
+			  document.getElementById("myDIV3").style.display = "none";
+
+			  document.getElementById("myDIV4").style.display = "block";
+			  
+			  document.getElementById("myDIV5").style.display = "none";
+				
+			  document.getElementById("myDIV6").style.display = "none";
+
+			}
+			
+			function myFunction5() {
+
+			  document.getElementById("myDIV1").style.display = "none"; 
+
+			  document.getElementById("myDIV2").style.display = "none";
+
+			  document.getElementById("myDIV3").style.display = "none";
+
+			  document.getElementById("myDIV4").style.display = "none";
+			  
+			  document.getElementById("myDIV5").style.display = "block";
+				
+			  document.getElementById("myDIV6").style.display = "none";
+
+			}
+			
+			function myFunction6() {
+
+			  document.getElementById("myDIV1").style.display = "none"; 
+
+			  document.getElementById("myDIV2").style.display = "none";
+
+			  document.getElementById("myDIV3").style.display = "none";
+
+			  document.getElementById("myDIV4").style.display = "none";
+			  
+			  document.getElementById("myDIV5").style.display = "none";
+				
+			  document.getElementById("myDIV6").style.display = "block";
+
+			}
+		</script>
+	</head>
+	<body class="container" style="background-color:black;">
+		<div ng-app="rModule">
+			<div class="" ng-controller="rController">  
+				<!-- model view controler 
+				<input  ng-model="addr">
+				<!--<button type="submit" name="" ng-click="ad()" >Books</button>
+				<button type="submit" name="" ng-click="addresses()" >Show Address</button><br>
+				<div ng-repeat="add in address">-->
+				
+					<div ng-repeat="addres in address" class="col-md-offset-3 col-md-6"  align="center" style="margin-top:200px; background-color:white;">
+						<div style="height:100px; margin-left:-5px; margin-right:-1px; background-color:#F9F9F9; border-bottom: 1px solid #d4d4d4">
+						</div>
+						<br><img style="margin-top:-100px;" class="img-thumbnail img-circle" ng-src="{{addres.picture.large}}" />
+						<div style="height:150px;" >
+							
+						</div>
+							<ul class="nav nav-pills" style="margin-bottom:50px; margin-left:50px;">
+   
+								<li class="active"><a class="active " data-toggle="pill" href="#glyphicon-user" onmouseover="myFunction1()">
+									<span class="glyphicon glyphicon-user aStyle" ></span>
+								</a></li>
+								
+								<li><a data-toggle="pill" href="#glyphicon-envelope" onmouseover="myFunction2()">
+									<span  class="glyphicon glyphicon-envelope aStyle"></span></li>
+								</a></li>
+								
+								<li><a data-toggle="pill" href="#glyphicon-calendar" onmouseover="myFunction3()">
+									<span  class="glyphicon glyphicon-calendar aStyle"  ></span></li>
+								</a></li>
+								
+								<li><a data-toggle="pill" href="#glyphicon-map-marker" onmouseover="myFunction4()">
+									<span  class="glyphicon glyphicon-map-marker aStyle"  ></span>
+								</a></li>
+								
+								<li><a data-toggle="pill" href="#glyphicon-earphone" onmouseover="myFunction5()">
+									<span  class="glyphicon glyphicon-earphone aStyle" ></span></li>
+								</a></li>
+								
+								<li><a data-toggle="pill" href="#glyphicon-lock" onmouseover="myFunction6()">
+									<span  class="glyphicon glyphicon-lock aStyle" ></span>
+								</a></li>
+							
+							</ul>
+							<div id="myDIV1" class="myDIV" style="display:block">
+
+								<div class="na1" style="background-color:white;">
+									<a href="#" style="color:gray;"> Hi, My Name is</a>
+									<a href="#" ><p style="color:black; font-size:30px; display">{{addres.name.title}} {{addres.name.first}} {{addres.name.last}}</p></a>
+								</div>
+
+							</div>
+
+							<div id="myDIV2" class="myDIV">
+
+								<div class="email1">
+									<a href="#" style="color:gray;"> My email is</a>
+									<a href="#" ><p style="color:black; font-size:30px; ">{{addres.email}}</p></a>
+								</div>
+
+							</div>
+
+							<div id="myDIV3" class="myDIV">
+
+								<div class="dob1">
+									<a href="#" style="color:gray;"> My birthday is</a>
+									<a href="#" ><p style="color:black; font-size:30px; ">{{addres.dob |date:M/d/yy}}</p></a>
+								</div>
+
+							</div>
+
+							<div id="myDIV4" class="myDIV">
+
+								<div class="dropdown-content map1">
+									<a href="#" style="color:gray;"> My address is</a>
+									<a href="#" ><p style="color:black; font-size:30px; ">{{addres.location.street}}</p></a>
+								</div>
+
+							</div>
+							<div id="myDIV5" class="myDIV">
+
+								<div class="na1">
+									<a href="#" style="color:gray;"> My phone number is</a>
+									<a href="#" ><p style="color:black; font-size:30px; ">{{addres.phone}}</p></a>
+								</div>
+
+							</div>
+							<div id="myDIV6" class="myDIV">
+
+								<div class="na1">
+									<a href="#" style="color:gray;">My password is</a>
+									<a href="#" ><p style="color:black; font-size:30px; ">{{addres.login.password}}</p></a>
+								</div>
+
+							</div>
+					
+						
+						<!--
+						<div id="email">
+						<p>{{addres.email}}</p>
+						<div id="dob">
+						<p>DOB:{{addres.dob |date:M/d/yy}}</p>
+						<div id="add">
+						<p>{{addres.location.street}}</p>
+						<div id="phone">
+						<p>Phone:{{addres.phone}}</p>
+						<div id="pass">
+						<p>Password: </p>
+						<a href="#name">
+						  <span  class="glyphicon glyphicon-user" style="font-size:40px; color:gray; margin:10px;"></span>
+						</a>
+						<a href="#email">
+						  <span  class="glyphicon glyphicon-envelope" style="font-size:40px; color:gray; margin:10px; "></span>
+						</a>
+						<a href="#dob">
+						  <span  class="glyphicon glyphicon-calendar" style="font-size:40px; color:gray; margin:10px; "></span>
+						</a>
+						<a href="#add">
+						  <span  class="glyphicon glyphicon-map-marker" style="font-size:40px; color:gray; margin:10px;"></span>
+						</a>
+						<a href="#phone">
+						  <span  class="glyphicon glyphicon-earphone" style="font-size:40px; color:gray; margin:10px; "></span>
+						</a>
+						<a href="#pass">
+						  <span  class="glyphicon glyphicon-lock" style="font-size:40px; color:gray; margin:10px;"></span>
+						</a>
+						-->
+						
+						
+					</div>
+					<!--<span ng-repeat="attr in address" ng-if="attr.key == 'description'">{{ attr.value }}</span>-->
+				
+			</div>
+		</div>
+	</body> 
+</html>
+
+
+
+<!--
+{"results":[
+{"gender":"male",
+"name":{"title":"mr","first":"henry","last":"hansen"},
+"location":{"street":"2226 church street","city":"glasgow","state":"somerset","postcode":"U5B 6QH"},
+"email":"henry.hansen@example.com",
+"login":{"username":"beautifulrabbit191","password":"hurrican","salt":"rUpFQa1E","md5":"46498c0a954549d1e838be039a96d3b6","sha1":"d57a8300896bf8839b65727ba071c470bf6a978e","sha256":"41e401d1e19ba3cb123bc3eae400be92da0ac6a47b65ebaa362d32ce93c8206f"},
+"dob":"1983-03-22 01:38:16",
+"registered":"2014-01-14 15:44:25",
+"phone":"017683 88487",
+"cell":"0727-245-562",
+"id":{"name":"NINO","value":"ZC 17 39 47 Z"},
+"picture":{"large":"https://randomuser.me/api/portraits/men/66.jpg","medium":"https://randomuser.me/api/portraits/med/men/66.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/66.jpg"},"nat":"GB"}],"info":{"seed":"9c8289fb992b8229","results":1,"page":1,"version":"1.1"}}
+
+
+cursor: pointer;
+    display: block;
+    width: 40px;
+    height: 48px;
+    float: left;
+    margin: 20px;
+    background-image: url(../img/card_icons.png);
+    background-size: 378px;
+    background-position-y: -48px;
+    -webkit-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+style.css:1
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+user agent stylesheet
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+Inherited from ul#values_list.values_list.horizontal_center
+style.css:1
+.values_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+}
+style.css:1
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+user agent stylesheet
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+Inherited from div.card
+style.css:1
+.card {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(0,0,0,.5);
+    overflow: hidden;
+    text-align: center;
+    z-index: 5;
+}
+style.css:1
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+Inherited from div.frame.card_offset
+style.css:1
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+Inherited from body
+style.css:1
+body {
+    background-color: #f9f9f9;
+    font-family: Ubuntu,sans-serif;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    position: relative;
+    left: 0;
+}
+style.css:1
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+Inherited from html.gr__randomuser_me
+style.css:1
+html {
+    font-family: Ubuntu,sans-serif;
+}
+style.css:1
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+style.css:1
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+Pseudo ::before element
+style.css:1
+.values_list li:before {
+    content: attr(data-label);
+    opacity: 0;
+}
+Pseudo ::selection element
+style.css:1
+::selection {
+    color: #fff;
+    background-color: #83ba43;
+}
+-->
