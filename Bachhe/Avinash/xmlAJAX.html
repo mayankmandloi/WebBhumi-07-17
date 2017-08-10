@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="animate.css">
+    <script src="wow.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+  </head>
+  <body>
+ <div class="col-sm-2"> <input type="text" name="" id="inp" class="form-control"></div>
+    <button type="button" name="button" onclick="add()">Click to add</button>
+    <div  id="main" ;>
+
+    </div>
+  </body>
+
+<script type="text/javascript">
+var book ;
+
+
+  function add() {
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        book = this.responseText;
+        book = JSON.parse(book);
+        book=book.Books;
+        console.log(book);
+        tt();
+
+      }
+    };
+    var str=document.getElementById('inp').value;
+       str="http://it-ebooks-api.info/v1/search/"+str;
+    xhttp.open("GET", str, true);
+    xhttp.send();
+  }
+
+
+function tt() {
+
+
+          for(i=0;i<book.length;i++){
+            var d=document.createElement("div");
+
+            var h3=document.createElement("h3");
+            h3.innerHTML=book[i].Title;
+            d.appendChild(h3);
+
+            var para=document.createElement("p");
+            para.innerHTML=book[i].Description;
+            d.appendChild(para);
+
+            var im=document.createElement("img");
+            im.src=book[i].Image;
+            d.appendChild(im);
+
+            d.className="col-xs-6 wow fadeInUp";
+
+            var t = (i%2)+1;
+            t+="s"
+            d.setAttribute("data-wow-duration", t);
+            d.setAttribute("data-wow-offset", "5");
+
+
+          if (i%2==0&&i>2) {
+              d.style.clear="left";
+              console.log(i);
+            }
+
+            document.getElementById("main").appendChild(d);
+          }
+  }
+</script>
+</html>

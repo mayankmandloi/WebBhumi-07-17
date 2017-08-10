@@ -88,6 +88,7 @@ var book = [{"ID":947185260,"Title":"Head First PHP & MySQL","Description":"If y
     </script>
   </head>
   <body>
+ <div class="col-sm-2"> <input type="text" name="" id="inp" class="form-control"></div>
     <button type="button" name="button" onclick="add()">Click to add</button>
     <div  id="main" ;>
 
@@ -116,7 +117,9 @@ var book ;
 
       }
     };
-    xhttp.open("GET", "http://it-ebooks-api.info/v1/search/Angular", true);
+    var str=document.getElementById('inp').value;
+       str="http://it-ebooks-api.info/v1/search/"+str;
+    xhttp.open("GET", str, true);
     xhttp.send();
   }
 
