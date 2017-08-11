@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Random User Generator | Home</title>
+  <meta charset="utf-8"><meta name="description" content="Random user generator is a FREE API for generating placeholder user information. Get profile photos, names, and more. It's like Lorem Ipsum, for people.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="dist/style.css"><script src="dist/all.js">
+  </script>
+</head>
+<body class>
+  <div id="navbar" class>
+    <div class="nav_toggle">
+      <div class="icon">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <ul>
+      <li><a href="index">Home</a></li>
+      <li><a href="photos">User Photos</a></li>
+      <li><a href="documentation">Documentation</a></li>
+      <li><a href="changelog">Change Log</a></li>
+      <li><a href="stats">Stats &amp; Graphs</a></li>
+      <li><a href="donate">Donate</a></li>
+      <li><a href="copyright">Copyright Notice</a></li>
+      <li class="blank"></li>
+      <li><a href="photoshop">Photoshop Extension</a></li>
+    </ul>
+  </div>
+  <header>
+    <h1>Random User Generator</h1>
+    <p>A free, <a id="openSource" href="https://github.com/RandomAPI/Randomuser.me-Node">open-source</a> 
+      API for generating random user data. Like Lorem Ipsum, but for people. </p>
+    <a href="https://twitter.com/randomapi" class="twitter">
+      <img src="img/twitter.png">Follow us @randomapi
+    </a>
+  </header>
+  <div class="frame card_offset">
+    <div class="card">
+      <div class="details">
+        <div class="user_photo horizontal_center" id="user_photo">
+          <a href="javascript:getNewUser();" class="refresh">New</a>
+          <img src>
+        </div>
+        <p id="user_title">Hi, My name is</p>
+        <p id="user_value">...</p>
+      </div>
+      <ul class="values_list horizontal_center" id="values_list">
+        <li data-title="Hi, My name is" data-value="..." data-label="name" class="active"></li>
+        <li data-title="My email address is" data-value="..." data-label="email" data-caps="false"></li>
+        <li data-title="My birthday is" data-value="..." data-label="birthday"></li>
+        <li data-title="My address is" data-value="..." data-label="location"></li>
+        <li data-title="My phone number is" data-value="..." data-label="phone"></li>
+        <li data-title="My password is" data-value="..." data-label="pass" data-caps="false"></li>
+      </ul>
+    </div>
+    <section class="sponsor">
+      <h2>Sponsored</h2>
+      <h3>RandomAPI</h3>
+      <p>Want to create your own <b>customized</b> data generator for your application?<br>Check out our other service RandomAPI!</p>
+      <button id="learnmore" class="button" onClick="window.open('https://randomapi.com');">Learn More</button>
+    </section>
+    <section class="advertisement">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+      </script>
+      <ins class="adsbygoogle" style="display:inline-block;width:230px;height:200px" data-ad-client="ca-pub-2036801804961954" data-ad-slot="7646598623"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      <ins class="adsbygoogle" style="display:inline-block;width:230px;height:200px;margin:0 16px;" data-ad-client="ca-pub-2036801804961954" data-ad-slot="7646598623"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      <ins class="adsbygoogle" style="display:inline-block;width:230px;height:200px" data-ad-client="ca-pub-2036801804961954" data-ad-slot="7646598623"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </section>
+    <section>
+      <h2>How to use</h2>
+      <p>You can use AJAX to call the Random User Generator API and will receive a randomly generated user in return. If you are using jQuery, you can use the $.ajax() function in the code snippet below to get started.
+      </p>
+      <pre>
+$.ajax({
+  url: '<span>https://randomuser.me/api/</span>',
+  dataType: '<span>json</span>',
+  success: function(<span>data</span>) {
+    console.log(<span>data</span>);
+  }
+});
+      </pre>
+    </section>
+    <section>
+      <h2>Results</h2>
+      <p>The application will provide you with a JSON, XML, CSV, or YAML object that you can parse and apply to your application.</p>
+      <p>You can specify the format you want the results in using the 
+        <a href="documentation#format">format</a> 
+        parameter.</p>
+      <pre>
+{
+  "results": [
+    {
+      "gender": "<span>male</span>",
+      "name": {
+        "title": "<span>mr</span>",
+        "first": "<span>romain</span>",
+        "last": "<span>hoogmoed</span>"
+      },
+      "location": {
+        "street": "<span>1861 jan pieterszoon coenstraat</span>",
+        "city": "<span>maasdriel</span>",
+        "state": "<span>zeeland</span>",
+        "postcode": <span>69217</span>
+      },
+      "email": "<span><a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="2755484a464e49094f4848404a48424367425f464a574b420944484a">[email&#160;protected]</a><script data-cfhash="f9e31" type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></span>",
+      "login": {
+        "username": "<span>lazyduck408</span>",
+        "password": "<span>jokers</span>",
+        "salt": "<span>UGtRFz4N</span>",
+        "md5": "<span>6d83a8c084731ee73eb5f9398b923183</span>",
+        "sha1": "<span>cb21097d8c430f2716538e365447910d90476f6e</span>",
+        "sha256": "<span>5a9b09c86195b8d8b01ee219d7d9794e2abb6641a2351850c49c309f1fc204a0</span>"
+      },
+      "dob": "<span>1983-07-14 07:29:45</span>",
+      "registered": "<span>2010-09-24 02:10:42</span>",
+      "phone": "<span>(656)-976-4980</span>",
+      "cell": "<span>(065)-247-9303</span>",
+      "id": {
+        "name": "<span>BSN</span>",
+        "value": "<span>04242023</span>"
+      },
+      "picture": {
+        "large": "<span>https://randomuser.me/api/portraits/men/83.jpg</span>",
+        "medium": "<span>https://randomuser.me/api/portraits/med/men/83.jpg</span>",
+        "thumbnail": "<span>https://randomuser.me/api/portraits/thumb/men/83.jpg</span>"
+      },
+      "nat": "<span>NL</span>"
+    }
+  ],
+  "info": {
+    "seed": "<span>2da87e9305069f1d</span>",
+    "results": <span>1</span>,
+    "page": <span>1</span>,
+    "version": "<span>1.1</span>"
+  }
+}
+</pre>
+    </section>
+    <section>
+      <h2>Thank you for helping us help you help us all</h2>
+      <p>Found a bug or have an idea?<br>Contribute to randomuser.me's database on our 
+        <a href="https://github.com/RandomAPI/Randomuser.me-Node">Github Repo</a>.
+      </p>
+      <h2>Contact Us</h2>
+      <p>If you have any questions/feedback or would like to get in touch with us, tweet us 
+        <a href="https://twitter.com/randomapi">@randomapi</a>
+      </p>
+    </section>
+    <section class="cheat">
+      <p>&uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; B A</p>
+    </section>
+  </div>
+  <footer>
+    <div class="frame">
+      <h1>Random User Generator</h1>
+      <div class="block">
+        <div class="builder">
+          <h3>Designed</h3>
+          <a href="https://twitter.com/arronhunt">
+            <img src="img/creator_arron.png" width="80px" alt="Designed by Arron Hunt" title="Designed by Arron Hunt"/>
+          </a>
+        </div>
+        <div class="builder">
+          <h3>Developed</h3>
+          <a href="https://twitter.com/solewolf1993">
+            <img src="img/creator_keith.png" width="80px" alt="Developed by Keith Armstrong" title="Developed by Keith Armstrong"/>
+          </a>
+        </div>
+      </div>
+      <div class="block">
+        <h3>Copyright Notice</h3>
+        <p>All randomly generated photos were hand picked from the authorized section of 
+          <a href="http://uifaces.com">UI Faces</a>
+          . Please visit 
+          <a href="http://uifaces.com/faq">UI Faces FAQ</a>
+          for more information regarding how you can use these faces.
+          <br><br>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function(i,s,o,g,r,a,m)
+     {
+      i['GoogleAnalyticsObject']=r;
+      i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
+      a=s.createElement(o),m=s.getElementsByTagName(o)[0];
+      a.async=1;a.src=g;
+      m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-42942064-1', 'randomuser.me');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

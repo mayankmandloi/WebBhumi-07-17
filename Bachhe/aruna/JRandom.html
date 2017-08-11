@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>anguler</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="js/angular.js" charset="utf-8"></script>
+		<script src="js/JrandomUser.js" charset="utf-8"></script>
+		
+		<style>
+	
+			.myDIV {
+			  min-width: 420px;
+			  min-height:200px;
+			  display: none;
+			  top:-320px;
+			  margin-top:-220px;
+			}
+		.aStyle
+		{
+			margin-bottom:5px; 
+			font-size:40px; 
+			margin-left:px;
+			display: block;
+		}
+		
+			.icons
+			{
+			color:gray;
+			font-size:40px;
+			}
+		</style>
+		<script>
+			function myFunction1() {
+
+				document.getElementById("myDIV1").style.display = "block";
+
+				document.getElementById("myDIV2").style.display = "none";
+
+				document.getElementById("myDIV3").style.display = "none";
+
+				document.getElementById("myDIV4").style.display = "none";
+				
+				document.getElementById("myDIV5").style.display = "none";
+				
+				document.getElementById("myDIV6").style.display = "none";
+
+			}
+
+			function myFunction2() {
+
+			  document.getElementById("myDIV1").style.display = "none";
+
+			  document.getElementById("myDIV2").style.display = "block";
+
+			  document.getElementById("myDIV3").style.display = "none";
+
+			  document.getElementById("myDIV4").style.display = "none";
+			  
+			  document.getElementById("myDIV5").style.display = "none";
+				
+			  document.getElementById("myDIV6").style.display = "none";
+
+			}
+
+			function myFunction3() {
+
+			  document.getElementById("myDIV1").style.display = "none";
+
+			  document.getElementById("myDIV2").style.display = "none";
+
+			  document.getElementById("myDIV3").style.display = "block";
+
+			  document.getElementById("myDIV4").style.display = "none";
+			  
+			  document.getElementById("myDIV5").style.display = "none";
+				
+			  document.getElementById("myDIV6").style.display = "none";
+			}
+
+			function myFunction4() {
+
+			  document.getElementById("myDIV1").style.display = "none"; 
+
+			  document.getElementById("myDIV2").style.display = "none";
+
+			  document.getElementById("myDIV3").style.display = "none";
+
+			  document.getElementById("myDIV4").style.display = "block";
+			  
+			  document.getElementById("myDIV5").style.display = "none";
+				
+			  document.getElementById("myDIV6").style.display = "none";
+
+			}
+			
+			function myFunction5() {
+
+			  document.getElementById("myDIV1").style.display = "none"; 
+
+			  document.getElementById("myDIV2").style.display = "none";
+
+			  document.getElementById("myDIV3").style.display = "none";
+
+			  document.getElementById("myDIV4").style.display = "none";
+			  
+			  document.getElementById("myDIV5").style.display = "block";
+				
+			  document.getElementById("myDIV6").style.display = "none";
+
+			}
+			
+			function myFunction6() {
+
+			  document.getElementById("myDIV1").style.display = "none"; 
+
+			  document.getElementById("myDIV2").style.display = "none";
+
+			  document.getElementById("myDIV3").style.display = "none";
+
+			  document.getElementById("myDIV4").style.display = "none";
+			  
+			  document.getElementById("myDIV5").style.display = "none";
+				
+			  document.getElementById("myDIV6").style.display = "block";
+
+			}
+		</script>
+	</head>
+	<body class="container" style="background-color:black;">
+		<div class="col-xs-offset-3 col-xs-6" style="margin-top:100px;">
+			<div style="height:400px; background-color:white;">
+				<div style="height:100px; background-color:#E8EAF6; border-bottom:1px solid #6F6F6F">
+				</div>
+				<div style="height:100px; margin-top:10px;">
+				
+				</div>
+				<div>
+					<span class="fa fa-user icons" style="margin-left:40px;"></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+					
+						
+						<!--
+						<div id="email">
+						<p>{{addres.email}}</p>
+						<div id="dob">
+						<p>DOB:{{addres.dob |date:M/d/yy}}</p>
+						<div id="add">
+						<p>{{addres.location.street}}</p>
+						<div id="phone">
+						<p>Phone:{{addres.phone}}</p>
+						<div id="pass">
+						<p>Password: </p>
+						<a href="#name">
+						  <span  class="glyphicon glyphicon-user" style="font-size:40px; color:gray; margin:10px;"></span>
+						</a>
+						<a href="#email">
+						  <span  class="glyphicon glyphicon-envelope" style="font-size:40px; color:gray; margin:10px; "></span>
+						</a>
+						<a href="#dob">
+						  <span  class="glyphicon glyphicon-calendar" style="font-size:40px; color:gray; margin:10px; "></span>
+						</a>
+						<a href="#add">
+						  <span  class="glyphicon glyphicon-map-marker" style="font-size:40px; color:gray; margin:10px;"></span>
+						</a>
+						<a href="#phone">
+						  <span  class="glyphicon glyphicon-earphone" style="font-size:40px; color:gray; margin:10px; "></span>
+						</a>
+						<a href="#pass">
+						  <span  class="glyphicon glyphicon-lock" style="font-size:40px; color:gray; margin:10px;"></span>
+						</a>
+						-->
+						
+						
+					
+					<!--<span ng-repeat="attr in address" ng-if="attr.key == 'description'">{{ attr.value }}</span>-->
+				
+		
+	</body> 
+</html>
+
+
+
+<!--
+{"results":[
+{"gender":"male",
+"name":{"title":"mr","first":"henry","last":"hansen"},
+"location":{"street":"2226 church street","city":"glasgow","state":"somerset","postcode":"U5B 6QH"},
+"email":"henry.hansen@example.com",
+"login":{"username":"beautifulrabbit191","password":"hurrican","salt":"rUpFQa1E","md5":"46498c0a954549d1e838be039a96d3b6","sha1":"d57a8300896bf8839b65727ba071c470bf6a978e","sha256":"41e401d1e19ba3cb123bc3eae400be92da0ac6a47b65ebaa362d32ce93c8206f"},
+"dob":"1983-03-22 01:38:16",
+"registered":"2014-01-14 15:44:25",
+"phone":"017683 88487",
+"cell":"0727-245-562",
+"id":{"name":"NINO","value":"ZC 17 39 47 Z"},
+"picture":{"large":"https://randomuser.me/api/portraits/men/66.jpg","medium":"https://randomuser.me/api/portraits/med/men/66.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/66.jpg"},"nat":"GB"}],"info":{"seed":"9c8289fb992b8229","results":1,"page":1,"version":"1.1"}}
+
+
+
+-->
