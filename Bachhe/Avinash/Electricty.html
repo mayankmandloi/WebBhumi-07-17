@@ -9,16 +9,18 @@
 <div id="main"></div>
 </body>
 <script type="text/javascript">
-	
+
+	console.log(electricty[0].data);
 	function add(){
-                for (var i = 0; i < electricty.length; i++) {
+                for (var i = 0; i < electricty[0].data.length; i++) {
                     		var d=document.createElement("div");
-                    		    d.innerHTML=electricty[i].fields[i].id+"&nbsp &nbsp &nbsp " 
-                    		    +" &nbsp &nbsp &nbsp" +electricty[i].fields[i].label+" &nbsp &nbsp &nbsp"
-                    		    +" &nbsp &nbsp &nbsp"+electricty[i].fields[i].type;
+                    		    d.innerHTML=electricty[0].data[i]
                     		   document.getElementById('main').appendChild(d);
 
                     }
 	               }
+
+
+								 console.log();
 </script>
 </html>
