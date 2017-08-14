@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+  </head>
+  <body>
+    <button type="button" name="button" onclick="loadDoc()">Click Me</button>
+    <input type="search" name="" value=" " placeholder="Subject" id="inputSearch">
+    <div class="" id="main">
+
+    </div>
+
+  </body>
+
+  <script type="text/javascript">
+
+  function loadDoc() {
+    document.getElementById("main").innerHTML="Loading.....";
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("main").innerHTML="";
+        var data = JSON.parse(this.responseText);
+        var book = data.Books;
+        var a=0;
+        for (i=0; i<book.length;i++)
+         {
+
+          if (a==0)
+            {
+            var d= document.createElement("div");
+            d.style.height="500px";
+            d.style.padding="10px";
+
+            var h3= document.createElement("h3");
+            h3.innerHTML=book[i].Title;
+            d.appendChild(h3);
+
+            var para=document.createElement("p");
+            para.innerHTML=book[i].Description;
+            d.appendChild(para);
+
+            var im=document.createElement("img")
+            im.src=book[i].Image;
+            d.appendChild(im);
+
+            d.className="col-xs-4 text-info clearfix wow fadeInUp";
+            d.style.animationDuration="5s";
+            document.getElementById("main").appendChild(d);
+
+
+          }
+        }
+      }
+    };
+    var str="http://it-ebooks-api.info/v1/search/"+document.getElementById("inputSearch").value;
+    xhttp.open("GET", str, true);
+    xhttp.send();
+  }
+
+  </script>
+</html>
