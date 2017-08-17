@@ -10,17 +10,22 @@
 </body>
 <script type="text/javascript">
 
-	console.log(electricty[0].data);
-	function add(){
-                for (var i = 0; i < electricty[0].data.length; i++) {
-                    		var d=document.createElement("div");
-                    		    d.innerHTML=electricty[0].data[i]
-                    		   document.getElementById('main').appendChild(d);
+	function add() {
+      var d=document.createElement("div");
+      d.style.border="8px double pink";
+      for (var i = 0; i <electricty[0].data.length; i++)
+      {
+        var para=document.createElement("p");
+        para.style.border="2px solid cyan";
 
-                    }
-	               }
-
-
-								 console.log();
+        for (var j = 0; j < electricty[0].data[i].length; j++)
+         {
+         	var my=electricty[0].data[i][j];
+         para.innerHTML=para.innerHTML+my+"&nbsp &nbsp &nbsp &nbsp";
+             }
+    d.appendChild(para);
+  }
+  document.getElementById("main").appendChild(d);
+}
 </script>
 </html>
