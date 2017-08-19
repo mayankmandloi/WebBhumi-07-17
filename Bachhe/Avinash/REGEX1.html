@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/javascript.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<button onclick="add()">click me</button>
+<div id="demo"></div>
+</body>
+<script type="text/javascript">
+	function add(){
+		            var my="hellO good morning";
+		            var patt=/^(hello)/img;
+		            var result=my.match(patt);
+		            document.getElementById('demo').innerHTML=result;
+	}
+</script>
+</html>

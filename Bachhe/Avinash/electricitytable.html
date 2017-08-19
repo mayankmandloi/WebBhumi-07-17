@@ -10,9 +10,11 @@
 </head>
 <body>
 <button onclick="add()" >click me</button>
+<button style="float: right"><a href="index.html">Back-To-Index</a></button> 
 
 <div class="container-fluid">
-<div id="main"></div>
+<div id="main">
+</div>
 </div>
 
 </body>
@@ -23,7 +25,7 @@
       d.className="table";
       for (var i = 0; i <electricty[0].data.length; i++)
       {
-        var para=document.createElement("tr");
+        var Trow=document.createElement("tr");
 
         for (var j = 0; j < electricty[0].data[i].length; j++)
          {
@@ -33,9 +35,9 @@
              tcol.style.border="1px solid cyan";
              tcol.style.color="purple";
 
-         para.appendChild(tcol);
+         Trow.appendChild(tcol);
              }
-    d.appendChild(para);
+    d.appendChild(Trow);
   }
   document.getElementById("main").appendChild(d);
 }
