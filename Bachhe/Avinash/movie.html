@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>animation WOW</title>
+  <link rel="stylesheet" type="text/css" href="animate.css">
+  <script type="text/javascript" src="wow.js"></script>
+
+  <script type="text/javascript">
+    new WOW().init();
+  </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+<body>
+<button onclick="add()">click me</button>
+<div id="my"></div>
+</body>
+<script type="text/javascript" src="movie.js"></script>
+<script type="text/javascript">
+	function add(){
+		          for (var i = 0; i < movie.length; i++) {
+		             	                                   var d=document.createElement("div");
+
+		             	                                   var info1=document.createElement("h3");
+		             	                                   info1.innerHTML="MOVIE DESCRIBTION :-"+"<hr>"+ movie[i].Description;
+		             	                                   info1.style.color="white";
+
+		             	                                   var im =document.createElement("img");
+		             	                                   im.src=movie[i].PosterPath;
+
+
+		             	                                   var info2=document.createElement("h1");
+		             	                                   info2.innerHTML="country :-"+"<hr>"+movie[i].Country;
+
+		             	                                   var info3=document.createElement("h2");
+		             	                                   info3.innerHTML="ReleaseDate:-"+"<hr>"+movie[i].ReleaseDate;
+
+		             	                                   var info4=document.createElement("h3");
+		             	                                   info4.innerHTML=movie[i].ReleaseYear;
+
+		             	                                   var para=document.createElement("p");
+		             	                                   para.innerHTML=movie[i].Title;
+		             	                                   para.style.background="orange";
+		             	                                   
+		             	                                   d.appendChild(info1);
+		             	                                   d.appendChild(im);
+		             	                                   d.appendChild(info2);
+		             	                                   d.appendChild(info3);
+		             	                                   d.appendChild(info4);
+		             	                                   d.appendChild(para);
+		             	                                   d.className="col-xs-4 wow fadeInUp";
+		             	                                   d.style.background="cyan";
+		             	                                   if (i%2==0) {
+		             	                                   	d.style.background="pink";
+		             	                                   }
+		             	                                   var t = (i%2)+1;
+		             	                                    t+="s";
+		             	                                    d.setAttribute("data-wow-duration",t);
+		             	                                    d.setAttribute("data-wow-offset","5");
+
+		             	                                    if (i%3==0 && i>2) 
+		             	                                    {
+                                                             d.style.clear="left";
+		             	                                    }
+
+		             	                                   document.getElementById('my').appendChild(d);
+		                                                  }
+}
+</script>
+</html>
