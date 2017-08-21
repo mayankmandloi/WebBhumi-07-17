@@ -43,16 +43,17 @@
 		             	                                   var info4=document.createElement("h3");
 		             	                                   info4.innerHTML=movie[i].ReleaseYear;
 
-		             	                                   var para=document.createElement("p");
+		             	                                   var para=document.createElement("h1");
 		             	                                   para.innerHTML=movie[i].Title;
 		             	                                   para.style.background="orange";
 		             	                                   
+		             	                                   d.appendChild(para);
 		             	                                   d.appendChild(info1);
 		             	                                   d.appendChild(im);
 		             	                                   d.appendChild(info2);
 		             	                                   d.appendChild(info3);
 		             	                                   d.appendChild(info4);
-		             	                                   d.appendChild(para);
+		             	                                   
 		             	                                   d.className="col-xs-4 wow fadeInUp";
 		             	                                   d.style.background="cyan";
 		             	                                   if (i%2==0) {
