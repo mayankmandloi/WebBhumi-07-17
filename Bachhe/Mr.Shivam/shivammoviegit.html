@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="animate.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="bootstrap.js"></script>
+    <script type="text/javascript" src="wow.js"></script>
+    <script>new WOW().init();</script>
+  </head>
+  <body>
+    <button type="button" name="button" onclick="add()">hit me</button>
+    <div class="" id="main">
+
+    </div>
+  </body>
+  <script type="text/javascript" src="shivammovie.js"></script>
+  <script type="text/javascript">
+
+    function add(){
+      for (var i = 0; i < movie.length; i++) {
+
+        var d=document.createElement("div");
+
+        var head1=document.createElement("h3");
+        head1.innerHTML=movie[i].Title;
+        head1.style.borderRadius="10px";
+        head1.style.backgroundColor="khaki";
+        head1.style.color="purple";
+        d.appendChild(head1);
+
+        var image1=document.createElement("img");
+        image1.src=movie[i].PosterPath;
+        d.appendChild(image1);
+
+        var head2=document.createElement("h4");
+        head2.innerHTML="Country :-"+"&nbsp"+movie[i].Country;
+        d.appendChild(head2);
+
+        var head3=document.createElement("h4");
+        head3.innerHTML="Release Date :-"+"&nbsp"+movie[i].ReleaseDate;
+        d.appendChild(head3);
+
+        var para=document.createElement("p");
+        para.innerHTML=movie[i].Description;
+        d.appendChild(para);
+
+// styles on the div
+
+          d.className="col-xs-4 wow fadeInUp";
+          d.style.background= "linear-gradient(purple,powderblue,khaki)";
+          d.style.overflow="scroll";
+          d.style.height= "500px";
+          d.style.textAlign="center";
+          var t = (i%2)+2;
+          t+="s"
+          d.setAttribute("data-wow-duration", t);
+        document.getElementById("main").appendChild(d);
+      }
+    }
+  </script>
+</html>
