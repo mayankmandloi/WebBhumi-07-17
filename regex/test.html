@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+  </head>
+  <body>
+    <form class="" action="#" method="post" novalidate>
+      <input type="email" name="" value="" id="main" onblur="functionName()">
+      <input type="submit" name="submit" value="submit">
+    </form>
+  </body>
+<script type="text/javascript">
+  function functionName() {
+    var inputElement1=document.getElementById("main");
+    var inputData = inputElement1.value;
+    if(/^[a-z][a-z0-9]+[@][webbhumi]+([.][a-z]{2,5}){1,3}$/.test(inputData))
+  {
+      inputElement1.style.boxShadow="2px 2px 2px 2px green";
+  }
+else {
+  inputElement1.style.boxShadow="2px 2px 2px 2px red";
+  if(inputData.indexOf(" ")>=0){
+    inputElement1.title="Space not allowed";
+}
+if(inputData.indexOf("@")<0){
+  inputElement1.title+=" Please add @";
+}
+if(inputData.search("/[0-9]/")==0){
+  inputElement1.title+=" Can not start with a Number";
+}
+    }
+  }
+</script>
+</html>
