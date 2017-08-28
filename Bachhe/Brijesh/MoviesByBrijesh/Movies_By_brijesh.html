@@ -1,0 +1,90 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>moviesss</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		.brij
+		{
+			width: 100%;
+			height: 100%;
+			padding: 2px 5px;
+		}
+	</style>
+</head>
+<body class="bg-info" style="padding: 50px;">
+
+	<!-- <button onclick="show_movies()">click add movie</button>
+ -->
+	<div class="container ">
+		<h1 class="text-center text-warning" style="margin-bottom:25px;">Movies Details</h1>
+		<div id="main"></div>
+	</div>
+
+</body>
+
+<script type="text/javascript" src="movie.js"></script>
+<script type="text/javascript">
+//     console.log(movie);      
+
+function show_movies()
+{
+
+
+	for ( var i=0; i<movie.length; i++)
+	{
+		console.log(movie.length); 
+
+		var d=document.createElement("div");
+		d.className="col-md-4 bg-info";
+		d.style.height="600px";
+		d.style.border="solid 5px #fff";
+		d.style.overflow="auto";
+		
+	
+		var m_title=document.createElement("h2");
+		m_title.innerHTML=movie[i].Title;
+		m_title.className="text-info";
+
+		var m_poster=document.createElement("img");
+		m_poster.src=movie[i].PosterPath;
+		m_poster.className="clearfix img-responsive";
+		m_poster.style.margin="10px 0";
+
+		var m_country=document.createElement("h5");
+		m_country.innerHTML="country --"+movie[i].Country;
+		m_country.className="text-danger";
+
+		var m_r_date=document.createElement("h5");
+		m_r_date.innerHTML="ReleaseDate:-"+movie[i].ReleaseDate;
+		m_r_date.className="text-danger";
+
+		var m_r_year=document.createElement("h5");
+		m_r_year.innerHTML=movie[i].ReleaseYear;
+		m_r_year.className="text-danger";
+
+		var m_des=document.createElement("para");
+		m_des.innerHTML="movie descripation :- "+movie[i].Description;		
+		m_des.style.height="50px";
+		m_des.style.overflow="auto";
+		m_des.className="text-muted";
+
+
+		d.appendChild(m_title);
+		d.appendChild(m_r_date);
+		d.appendChild(m_r_year);
+		d.appendChild(m_country);
+		d.appendChild(m_poster);
+		d.appendChild(m_des);
+
+		
+		document.getElementById("main").appendChild(d);
+
+	}
+}
+show_movies();
+</script>
+</html>

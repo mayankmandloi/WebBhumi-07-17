@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+<style>
+  .main
+{
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.slide
+{
+  position: absolute;
+  width: 90%;
+  height: 350px;
+  top:0px;
+  left:100%;
+  padding: 25px 5%;
+  transition: 1s;
+}
+</style>
+</head>
+  <body>
+<div class="main">
+  <div class="slide" style="background-color:yellow"></div>
+  <div class="slide" style="background-color:green"></div>
+  <div class="slide" style="background-color:blue"></div>
+  <div class="slide" style="background-color:red"></div>
+  <div class="slide" style="background-color:pink"></div>
+  <div class="slide" style="background-color:tan"></div>
+  <div class="slide" style="background-color:gold"></div>
+  <div class="slide" style="background-color:orange"></div>
+  <div class="slide" style="background-color:cyan"></div>
+  <div class="slide" style="background-color:grey"></div>
+  <div class="slide" style="background-color:black"></div>
+</div>
+<button type="button" name="button" onclick="moveMain()">Click me</button>
+  </body>
+<script type="text/javascript">
+     var e=0;
+  function move() {
+     eles = document.getElementsByClassName("slide");
+
+    if(e<eles.length)
+     {
+     eles[e].style.left="0%";
+
+     }
+       e++;
+    if(e>eles.length)
+    {
+     for(k=0;k<eles.length;k++)
+      {
+        eles[k].style.left="100%";
+
+      }
+      e=0;
+    }
+
+  }
+function moveMain() {
+  setInterval(function()
+{
+move();
+},2000);
+}
+
+
+
+
+
+</script>
+</html>
