@@ -15,6 +15,17 @@
   </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style media="screen">
+  .fix-heigth
+{
+  height:100vh;
+  margin: 10px 0px 5px 0px;
+  overflow: auto;
+}
+*{
+    word-wrap: break-word;
+}
+</style>
   </head>
 <body>
 <button onclick="add()">click me</button>
@@ -28,9 +39,10 @@
 
 		             	                                   var info1=document.createElement("h3");
 		             	                                   info1.innerHTML="MOVIE DESCRIBTION :-"+"<hr>"+ movie[i].Description;
-		             	                                   info1.style.color="white";
+		             	                                   info1.style.color="green";
 
 		             	                                   var im =document.createElement("img");
+		             	                                   im.className="img img-responsive";
 		             	                                   im.src=movie[i].PosterPath;
 
 
@@ -48,13 +60,14 @@
 		             	                                   para.style.background="orange";
 		             	                                   
 		             	                                   d.appendChild(para);
-		             	                                   d.appendChild(info1);
 		             	                                   d.appendChild(im);
+		             	                                   d.appendChild(info1);
+		             	                                   
 		             	                                   d.appendChild(info2);
 		             	                                   d.appendChild(info3);
 		             	                                   d.appendChild(info4);
 		             	                                   
-		             	                                   d.className="col-xs-4 wow fadeInUp";
+		             	                                   d.className="col-xs-4 wow fadeInUp fix-heigth";
 		             	                                   d.style.background="cyan";
 		             	                                   if (i%2==0) {
 		             	                                   	d.style.background="pink";

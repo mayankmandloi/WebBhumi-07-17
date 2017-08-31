@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/wow.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+    new WOW().init();
+  </script>
+	<script type="text/javascript" src=""></script>
+	<style type="text/css">
+		*{
+            word-wrap: break-word;
+          }
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12" style="background-image: url(images/2.jpg);height: 500px">
+			<div style="margin-top: 100px;text-align: center;">
+			<button class="btn btn-success" data-toggle="modal" data-target="#myModal">click-1</button>
+			<button class="btn btn-info" data-toggle="modal" data-target="#myModal">click-2</button>
+			<button class="btn btn-danger" data-toggle="modal" data-target="#myModal">click-3</button>
+			<button class="btn btn-warning" data-toggle="modal" data-target="#myModal">click-4</button>
+			<button class="btn" style="background-color: grey" data-toggle="modal" data-target="#myModal">click-5</button>
+			<button class="btn" style="background-color: pink" data-toggle="modal" data-target="#myModal">click-6</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog" >
+    <div class="modal-dialog" >
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="background-image: url(images/b.jpg);color:purple">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body" >
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
